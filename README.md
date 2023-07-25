@@ -55,12 +55,12 @@ Once both the backend and frontend servers are running, open your web browser an
 ### Testing
 The application comes with automated tests to ensure its functionality. To run the tests, use the following commands:
 
-Run Backend Tests:
+### Run Backend Tests:
 ### From the project root directory
 `npm test --prefix backend`
 The tests use Jest and Supertest for testing the API endpoints.
 
-Run Frontend Tests:
+### Run Frontend Tests:
 ### From the project root directory
 `npm test --prefix frontend`
 The tests use Jest and React Testing Library for testing the React components.
@@ -78,7 +78,7 @@ CORS and Helmet Middleware:
 The backend server uses CORS middleware to restrict cross-origin requests.
 The backend server uses Helmet middleware to set various HTTP headers, enhancing security.
 
-# Contributing
+### Contributing
 Contributions to the iTunes Store Search App are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 
