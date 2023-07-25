@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+## iTunes Store Search App
+The iTunes Store Search App allows users to search for different types of media, such as movies, music, podcasts, and more, using the iTunes Search API. Users can also add their favorite media items to a favorites list.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to Use the App
+1. Search for Media Content:
 
-## Available Scripts
+Enter a search term in the search input field.
+Select the media type from the dropdown menu (e.g., movie, music, podcast, etc.).
+Click the "Search" button or press Enter to initiate the search.
+The search results will be displayed below the search form.
+2. Add Items to Favorites:
 
-In the project directory, you can run:
+After performing a search, the search results will be displayed in a list.
+Click the "Add to Favorites" button next to an item in the search results to add it to the favorites list.
+3. View Favorites List:
 
-### `npm start`
+The "Favorites" section below the search results displays the list of favorite items.
+Click the "Remove" button next to an item in the favorites list to remove it from the list.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Getting Started
+To run the application on your local machine, you don't need to clone the entire repository. Instead, you can directly use npm start to start the frontend and backend servers.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Prerequisites
+Ensure that you have the following software installed on your machine:
 
-### `npm test`
+Node.js (version 14 or higher)
+npm (Node.js package manager)
+Installation
+Install Backend Dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Install backend dependencies (skip if already installed)
+`npm install --prefix backend`
+Install Frontend Dependencies:
 
-### `npm run build`
+# Install frontend dependencies (skip if already installed)
+`npm install --prefix frontend`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Running the App
+Start the Backend Server:
+# From the project root directory
+`npm start --prefix backend`
+The backend server will run on port 5000 by default. If you need to change the port, you can modify it in the index.js file inside the backend folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the Frontend Development Server:
+# From the project root directory
+`npm start --prefix frontend`
+The frontend server will run on port 3000 by default. If you need to change the port, you can modify it in the package.json file inside the frontend folder.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open your Web Browser:
 
-### `npm run eject`
+Once both the backend and frontend servers are running, open your web browser and visit http://localhost:3000 to access the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Testing
+The application comes with automated tests to ensure its functionality. To run the tests, use the following commands:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run Backend Tests:
+# From the project root directory
+`npm test --prefix backend`
+The tests use Jest and Supertest for testing the API endpoints.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Run Frontend Tests:
+# From the project root directory
+`npm test --prefix frontend`
+The tests use Jest and React Testing Library for testing the React components.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Security Measures
+1. To ensure the security of this application, the following measures have been implemented:
 
-## Learn More
+The iTunes Search API does not require an API key for basic search requests. It is a public API provided by Apple that allows users to search for media content on the iTunes Store. However if there was any usage of API keys, the API keys and sensitive information would be stored as environment variables to prevent exposure in version control or public access.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Error Handling:
+Proper error handling is implemented to handle and log errors securely without revealing sensitive information to the end-users.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. CORS and Helmet Middleware:
 
-### Code Splitting
+The backend server uses CORS middleware to restrict cross-origin requests.
+The backend server uses Helmet middleware to set various HTTP headers, enhancing security.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Contributing
+Contributions to the iTunes Store Search App are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-### Analyzing the Bundle Size
+# License
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as per the terms of the license
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy searching! 🎶🎬📚
