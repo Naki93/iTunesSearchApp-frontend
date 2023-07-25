@@ -14,7 +14,7 @@ const App = () => {
   const handleSearch = async ({ term, mediaType }) => {
     try {
       // Make the API call to your backend
-      const response = await fetch('http://localhost:5000/api/search', {
+      const response = await fetch('https://itunes-search-store-api.onrender.com/api/search', {
         
         method: 'POST',
         headers: {
@@ -39,7 +39,7 @@ const App = () => {
   const handleAddToFavorites = async (item) => {
     try {
       // Make the API call to add the item to favorites in the backend
-      const response = await fetch('http://localhost:5000/api/favorites', {
+      const response = await fetch('https://itunes-search-store-api.onrender.com/api/favorites', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const App = () => {
   const handleRemoveFromFavorites = async (id) => {
     try {
       // Make the API call to remove the item from favorites in the backend
-      const response = await fetch(`http://localhost:5000/api/favorites/${id}`, {
+      const response = await fetch(`https://itunes-search-store-api.onrender.com/api/favorites/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
